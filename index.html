@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/bookmark.jpg" />
+    <title>Bookmark</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center my-5 mx-auto">Bookmarker</h1>
+
+      <hr />
+
+      <div class="bookmark text-center my-3">
+        <span>
+          <i class="fa-solid fa-bookmark fa-2x"></i>
+        </span>
+        <span class="bookmark-text">Bookmark your favorite sites </span>
+
+        <span>
+          <i class="fa-solid fa-bookmark fa-2x"></i>
+        </span>
+      </div>
+
+      <div class="form px-3">
+        <div class="input-name mb-2">
+          <label for="bookName">
+            <span>
+              <i class="fa-solid fa-book-bookmark"></i>
+            </span>
+            <span class="input-name-site ps-1"> Site Name</span>
+          </label>
+        </div>
+        <input
+          id="bookName"
+          class="form-control"
+          type="text"
+          placeholder="Bookmark Name"
+          name="bookName"
+        />
+        <p class="msgname alert alert-danger d-none p-2">
+          Site name must contain at least 3 characters
+        </p>
+        <div class="input-name mb-2 mt-4">
+          <label for="siteUrl">
+            <span>
+              <i class="fa-solid fa-link"></i>
+            </span>
+            <span class="input-name-site ps-1"> Site URL</span>
+          </label>
+        </div>
+        <input
+          id="siteUrl"
+          class="form-control"
+          type="url"
+          placeholder="Website URL"
+          name="siteUrl"
+        />
+        <p class="msgurl alert alert-danger d-none p-2">
+          Site URL must be a valid one
+        </p>
+
+        <button class="btn btn-danger my-4 d-block mx-auto px-5 submit">
+          Submit
+        </button>
+        <button
+          class="btn btn-danger my-4 d-block mx-auto px-5 update d-none"
+          onclick="updateSite()"
+        >
+          Update
+        </button>
+      </div>
+
+      <hr />
+
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th>Index</th>
+            <th>Website Name</th>
+            <th>Visit</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
