@@ -143,7 +143,8 @@ function updateSite() {
     
         
         siteList.splice(index , 1 , site);
-    
+        btnAddSite.classList.remove('d-none');
+        btnUpdateSite.classList.add('d-none');
     
         localStorage.setItem('sites',JSON.stringify(siteList));
     
